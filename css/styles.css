@@ -59,7 +59,7 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  transition-property: color var(--color-akcent);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -102,7 +102,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
 
-  transition-property: color var(--color-akcent);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -139,7 +139,9 @@ body {
 .link .site-nav:active {
   color: #404bbf;
 }
-
+.active{
+  color: var(--color-akcent);
+}
 .logo-color {
   color: var(--color-logo-button);
   font-family: "Raleway", sans-serif;
@@ -251,7 +253,7 @@ body {
 }
 .social-list-link:hover {
   background-color: var(--color-akcent);
-  transition: background-color var(--color-akcent) 250ms
+  transition: background-color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-item {
@@ -295,7 +297,7 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
 
-  transition: background-color var(--color-akcent) 250ms
+  transition: background-color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-projects:hover,
@@ -361,7 +363,7 @@ body {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
 
-  transition-property: color var(--color-akcent);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -393,7 +395,7 @@ body {
   text-align: center;
   border: solid 1px rgba(46, 47, 66, 0.4);
 
-  transition-property: color var(--color-akcent);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -479,7 +481,7 @@ a {
 .social-media-link {
   fill: #ffffff;
 
-  transition-property: backgrond-color var(--color-media);
+  transition-property: backgrond-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -500,7 +502,7 @@ a {
 }
 
 .list-button .item {
-  transition-property: box-shadow 0px 4px 4px var(--color-shadow);
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -530,7 +532,7 @@ a {
 }
 .projects-link {
   display: block;
-  transition-property: box-shadow 0px 1px 6px var(--color-shadow-second);
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -540,10 +542,6 @@ a {
 .prof-overlay {
   position: relative;
   overflow: hidden;
-}
-.projects-link:hover .overlay-text {
-  opacity: 1;
-  transform: translateY(0);
 }
 .prof-overlay::before {
   display: inline-block;
@@ -555,6 +553,7 @@ a {
   top: 0;
   background-color: var(--color-logo-button);
   opacity: 0;
+
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -572,6 +571,19 @@ a {
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects-link:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects-link:focus .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects-link:focus .prof-overlay::before {
+  opacity: 1;
+  transform: translateY(0);
+  
 }
 .projects-link:hover .prof-overlay::before {
   opacity: 1;
@@ -672,4 +684,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-btn:hover,
+.modal-btn:focus{
+  background-color: var(--color-akcent);
+  fill: var(--primary-white-color);
 }
