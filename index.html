@@ -34,7 +34,7 @@
     <!--Hero-->
     <section class="section hero"><div class="contanair">
         <h1 class="section-title-hero">Effective Solutions for Your Business</h1>
-        <button type="button" class="button-hero">Order Service</button>
+        <button type="button" class="button-hero" data-modal-open>Order Service</button>
     </div></section>
     
     <section class="section-advantage"><div class="contanair"> <!--section2-h2-->
@@ -187,5 +187,16 @@
         <li><a href="" class="social-media-link"><svg class="social-list-icon" width="24" height="24"><use href="./img/sprite.svg#icon-linkedin-1"></use></svg></a></li>
     </ul>
 </div> </div></footer>
+
+<!-- Modal -->
+<div class="backdrop is-hidden" data-modal>
+<div class="modal">
+<button class="modal-btn" data-modal-close>
+    <svg class="modal-icon" width="8" height="8">
+        <use href="./img/sprite.svg#icon-close"></use>
+    </svg>
+</button>
+</div></div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
